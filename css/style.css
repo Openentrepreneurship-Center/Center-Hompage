@@ -34,7 +34,7 @@
     --gradient-glow: linear-gradient(135deg, var(--primary-red), var(--accent-purple));
     
     /* Spacing */
-    --section-padding: 120px;
+    --section-padding: 50px;
     --container-width: 1520px;
     
     /* Typography */
@@ -418,7 +418,7 @@ section {
 
 .section-header {
     text-align: center;
-    margin-bottom: 48px;
+    margin-bottom: 36px;
 }
 
 .section-title {
@@ -825,6 +825,9 @@ section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
+    justify-content: center;
+    justify-items: stretch;
+    text-align: center;
 }
 
 .feature-card {
@@ -1596,13 +1599,19 @@ section {
 /* === ABOUT FEATURES HEADER === */
 .about-features-header {
     text-align: center;
-    margin: 56px 0 32px;
+    margin: 56px auto 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .about-features-header h3 {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--text-primary);
     letter-spacing: -0.02em;
+    text-align: center;
+    width: 100%;
 }
 
 /* === FEATURE CLIENTS TAG === */

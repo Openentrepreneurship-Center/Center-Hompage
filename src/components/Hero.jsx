@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react'
 
 function Hero() {
   const particlesRef = useRef(null)
-  const heroContentRef = useRef(null)
 
   // Create particle animation
   useEffect(() => {
@@ -49,22 +48,6 @@ function Hero() {
     }
   }, [])
 
-  // Parallax scroll effect
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrolled = window.pageYOffset
-      if (heroContentRef.current) {
-        heroContentRef.current.style.transform = `translateY(${scrolled * 0.5}px)`
-      }
-      if (particlesRef.current) {
-        particlesRef.current.style.transform = `translateY(${scrolled * 0.5}px)`
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
   const scrollTo = (e, id) => {
     e.preventDefault()
     const target = document.getElementById(id)
@@ -78,16 +61,16 @@ function Hero() {
         <div className="gradient-overlay"></div>
       </div>
 
-      <div className="hero-content" ref={heroContentRef}>
-        <h1 className="hero-title" data-aos="fade-up">
+      <div className="hero-content">
+        <h1 className="hero-title">
           엔터프라이즈 AI 시스템으로<br />
           <span className="highlight">기업의 AX</span>를<br />
           함께 실현합니다
         </h1>
-        <p className="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+        <p className="hero-subtitle">
           AX 산학협력을 통한 기업-대학 간 오픈이노베이션 &amp; 오픈앙트레프레너십
         </p>
-        <div className="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+        <div className="hero-buttons">
           <a href="#projects" className="btn btn-primary" onClick={e => scrollTo(e, 'projects')}>
             <span>프로젝트 보기</span>
             <i className="fas fa-arrow-right"></i>
