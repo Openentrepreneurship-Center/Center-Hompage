@@ -17,7 +17,7 @@ export const team = [
   },
   {
     name: '이지현',
-    position: "Master's Student",
+    position: 'Ph.D. Student',
     focus: 'Technology Education & Workshop Design',
     image: '/team/jihyun.jpg',
     tags: ['Education', 'Workshop', 'Curriculum'],
@@ -34,9 +34,9 @@ export const team = [
   {
     name: '정우희',
     position: "Master's Student",
-    focus: 'Generative Media / UX Design',
+    focus: 'Software Development / UX Design',
     image: '/team/woohee.jpg',
-    tags: ['Generative AI', 'Creative AI', 'UX/UI'],
+    tags: ['STT (Speech-to-Text)', 'Strategic Planning', 'UX/UI'],
     aosDelay: '400',
   },
   {
